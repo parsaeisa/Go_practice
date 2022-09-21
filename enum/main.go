@@ -1,5 +1,6 @@
 package main
 
+// this is a pattern which makes and enum of fixed numbers and strings
 type Fruit int
 
 const (
@@ -8,6 +9,14 @@ const (
 	Banana
 )
 
-func main() {
+func (f Fruit) String() string {
+	return [...]string{
+		"Apple",
+		"Orange",
+		"Banana",
+	}[f]
+}
 
+func main() {
+	println(Orange.String())
 }
