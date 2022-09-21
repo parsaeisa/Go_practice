@@ -15,6 +15,8 @@ func (f Fruit) String() string {
 		"Orange",
 		"Banana",
 	}[f]
+
+	// Question : what is ... in golang
 }
 
 func main() {
