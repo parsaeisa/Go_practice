@@ -1,7 +1,7 @@
 # golang_http_client
 
 ```go
-package sanjeh
+package package_name
 
 import (
 	"encoding/json"
