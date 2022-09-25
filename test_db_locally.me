@@ -1,0 +1,98 @@
+# test_db_locally
+
+### these codes are written for my self to test repository models . 
++ and they are very messy !!
+
+## Connect to databse : 
+
+at first I should run the docker composer . ( comment the app )
+```bash 
+sudo docker-compose -f docker-compose.yml up --build
+```
+Then I should run the migrations ( with golang-migration or migrations commands in the app 
+
+For connecting to local database in go project I use the line below : 
++ in my first case the database was mySQL , so I imported the "github.com/jmoiron/sqlx" package . you can see "mysql" the first argument of connect method . that should be imported . 
+```go
+package main 
+
+import(
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/jmoiron/sqlx"
+)
+func main () {
+	db,err :=  sqlx.Connect("mysql" , "username:password@(localhost:3306)/databaseName")	
+	if(err != nil){
+		println(err.Error())
+	}	
+}
+```
+
+## Sending requests :
+The code below adds a new row to database . 
+```go
+
+func create (db *sqlx.DB){
+	r := repo.NewMySQLCancellationScheduleRide(db)		
+	c := &model.CancellationScheduleRide{
+		uint64(1000) ,
+		time.Second ,
+		&driverDelay ,
+		&driverPickupWaitingTime ,
+		time.Now() , 
+		nil,
+	}
+	
+	ctx := context.Background()
+	err = r.Create(ctx , c)
+	if(err != nil){
+		println(err.Error())
+	}
+}
+```
+This can update the database : 
+```go
+func update (db *sqlx.DB){
+	r := repo.NewMySQLCancellationScheduleRide(db)
+  
+	c := model.CancellationScheduleRide{
+		uint64(1000) ,
+		time.Second ,
+		&driverDelay ,
+		&driverPickupWaitingTime ,
+		time.Now() , 
+		nil,
+	}
+	RowsAffected , err := r.Update(context.Background() , 1000 , c)
+	println(RowsAffected)
+  if err != nil {
+	  println(err.Error())
+  }
+}
+
+```
+
+and at last this code can map database row to an object : 
+ ```go
+ 
+func read (db *sqlx.DB){
+	schedule_ride := model.CancellationScheduleRide{}
+	rows, err := db.Query("SELECT ride_id , match_time , driver_delay , driver_pickup_waiting_time, " +
+	"updated_at FROM cancellation_schedule_ride WHERE ride_id = 1000")
+	defer rows.Close()
+
+	for rows.Next() {
+		err = rows.Scan(&schedule_ride.RideID , &schedule_ride.MatchTime , &schedule_ride.DriverDelay,
+			&schedule_ride.DriverPickupWaitingTime , &schedule_ride.UpdatedAt)
+
+		if err != nil {
+			log.Println(err)
+		}
+		print(schedule_ride.RideID , ",")
+		print(schedule_ride.MatchTime , ",")
+		print(schedule_ride.DriverDelay.String() , ",")
+		print(schedule_ride.DriverPickupWaitingTime.String() , ",")
+		print(schedule_ride.UpdatedAt.String() , ",")
+	}
+}
+ ```
