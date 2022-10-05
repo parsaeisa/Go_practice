@@ -5,6 +5,7 @@ In this directory you can see my practices around golang concurrency design patt
 
 here's a list of design patterns that I want to practice : 
 * fan out
+* fan in
 
 ### Notes 
 
