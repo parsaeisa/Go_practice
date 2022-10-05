@@ -26,6 +26,9 @@ func main() {
 	fmt.Println("All completed .")
 }
 
+// whats the difference between <- chan string and chan string
+// after I replaced all <- chan string's with chan string , it still worked correctly .
+
 func merge(channels ...<-chan string) <-chan string {
 	wg := sync.WaitGroup{}
 	out := make(chan string)
