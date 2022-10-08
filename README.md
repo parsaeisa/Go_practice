@@ -17,3 +17,6 @@ after this tour I learned fundamentals of programming with golang so that I coul
 
 + you can see my url shortener in following repo : 
 https://github.com/parsaeisa/golang_url_shortener
+
+### To Learn : 
+* strings.Builder
