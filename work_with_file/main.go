@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"io/ioutil"
+	"path"
 )
 
 const (
@@ -11,10 +12,39 @@ const (
 )
 
 func main() {
-	err := changeNameInFile("./test.txt", "./dest.txt")
+	//err := changeNameInFile("./test.txt", "./dest.txt")
+	//if err != nil {
+	//	println(err.Error())
+	//}
+
+	err := printFileNamesInDir("./../", "")
 	if err != nil {
-		println(err.Error())
+		panic(err)
 	}
+}
+
+// how we define optional parameter with default value
+func printFileNamesInDir(s, whitespace string) error {
+	entries, err := ioutil.ReadDir(s)
+	if err != nil {
+		return err
+	}
+
+	for _, entry := range entries {
+		if entry.IsDir() {
+			print(">>>>>>")
+			err = printFileNamesInDir(path.Join(s, entry.Name()), whitespace+"  ")
+			if err != nil {
+				return err
+			}
+		} else {
+			print(whitespace)
+			println(entry.Name())
+		}
+
+	}
+
+	return nil
 }
 
 func changeNameInFile(templateFilePath, destinationFilePath string) error {
