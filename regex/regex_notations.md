@@ -1,5 +1,7 @@
 # regex notations
 
+the characaters that are used are called **metacharacter** . 
+
 **Regex** : cat
 
 **Matches** : catalog , catherine , sophisticated 
@@ -37,11 +39,14 @@ Good (morning|afternoon|night) !
 
 t[ai]n : tan , tin 
 
+[ab] : a or b or nothing else . 
+
 ### Unclassified 
-| notation | usage                                                 |
-|----------|-------------------------------------------------------|
-| $        | indicates end of the expression                       |
-| ^        | NOT notation                                          |
-| .        | if you replace this with any character , is validated |
+| notation | usage                                                   |
+|----------|---------------------------------------------------------|
+| $        | indicates end of the expression                         |
+| ^        | NOT notation                                            |
+| .        | if you replace this with any character , is validated   |
+ | \        | to use literally metacharacters , like \ [ , \ {  etc . | 
 
 t.n : tin , tan , t n , ...
