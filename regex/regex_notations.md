@@ -1,5 +1,11 @@
 # regex notations
 
+**Regex** : cat
+
+**Matches** : catalog , catherine , sophisticated 
+
+you should specify beginning and ending of the line . 
+
 ### Counts
 
 | char  | counts           |
