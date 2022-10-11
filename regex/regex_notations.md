@@ -32,8 +32,16 @@ example :
 Good (morning|afternoon|night) ! 
 "Good morning !" is validated .  
 
+
+* [  ] is used for bunch of letters that on of them can be accepted .
+
+t[ai]n : tan , tin 
+
 ### Unclassified 
-| notation | usage                           |
-|----------|---------------------------------|
-| $        | indicates end of the expression |
-| ^        | NOT notation                    |
+| notation | usage                                                 |
+|----------|-------------------------------------------------------|
+| $        | indicates end of the expression                       |
+| ^        | NOT notation                                          |
+| .        | if you replace this with any character , is validated |
+
+t.n : tin , tan , t n , ...
