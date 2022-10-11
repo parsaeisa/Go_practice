@@ -1,6 +1,9 @@
 package main
 
-import "regexp"
+import (
+	"fmt"
+	"regexp"
+)
 
 func main() {
 	// learn regex notations
@@ -9,6 +12,9 @@ func main() {
 		panic(err)
 	}
 
-	matched := regex.MatchString("foo.heasdfa")
-	print(matched)
+	matched := regex.MatchString("foogg")
+	println(matched)
+
+	re := regexp.MustCompile("foo.?")
+	fmt.Printf("%q\n", re.Find([]byte("seafood foollee")))
 }
