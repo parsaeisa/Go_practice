@@ -1,6 +1,9 @@
 package pipelineworker
 
-import "context"
+import (
+	"context"
+	"fmt"
+)
 
 func NewPipeline(ctx context.Context, numberOfPrintWorkers, numberOfCheckWorkers int) (in, out chan string) {
 	inCheck := make(chan string)
@@ -12,7 +15,11 @@ func NewPipeline(ctx context.Context, numberOfPrintWorkers, numberOfCheckWorkers
 			In:  inPrint,
 			Out: outFinal,
 		}
-		go w.Print(ctx)
+
+		go func(iterator int) {
+			fmt.Printf("worker %d started working on printing \n", iterator)
+			w.Print(ctx)
+		}(i)
 	}
 
 	for i := 0; i < numberOfCheckWorkers; i++ {
@@ -20,7 +27,11 @@ func NewPipeline(ctx context.Context, numberOfPrintWorkers, numberOfCheckWorkers
 			In:  inCheck,
 			Out: inPrint,
 		}
-		go w.Check(ctx)
+
+		go func(i int) {
+			fmt.Printf("worker %d started working on checking \n", i)
+			w.Check(ctx)
+		}(i)
 	}
 
 	return inCheck, outFinal
