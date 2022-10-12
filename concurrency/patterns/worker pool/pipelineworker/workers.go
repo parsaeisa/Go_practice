@@ -1,4 +1,4 @@
-package worker_pool
+package pipelineworker
 
 import "context"
 
