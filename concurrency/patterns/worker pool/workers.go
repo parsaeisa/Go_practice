@@ -6,7 +6,7 @@ type Worker struct {
 	In, Out chan string
 }
 
-func (t Worker) Print(ctx context.Context) {
+func (t *Worker) Print(ctx context.Context) {
 	for {
 		select {
 		case <-ctx.Done():
@@ -18,13 +18,13 @@ func (t Worker) Print(ctx context.Context) {
 	}
 }
 
-func (t Worker) Check(ctx context.Context) {
+func (t *Worker) Check(ctx context.Context) {
 	for {
 		select {
 		case <-ctx.Done():
 			return
 		case payload := <-t.In:
-			println(payload, " checked")
+			//println(payload, " checked")
 			t.Out <- payload + ":checked"
 		}
 	}
