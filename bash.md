@@ -4,7 +4,7 @@ Here you can see names and some tutorials of golang packages which run
 in terminals . 
 * These packages are so suitable for Makefiles in golang projects .
 
-`gotestsum` is like go test ./... but a utilized with a more preferable log . You can get this
+`gotestsum` is like go test ./... but is utilized with a more preferable log . You can get this
 by using below command : 
 ```bash
 go install gotest.tools/gotestsum@latest
