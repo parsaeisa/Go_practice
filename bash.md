@@ -25,5 +25,5 @@ installing :
 go install golang.org/x/tools/cmd/goimports@latest
 ```
 
-* before using any of this in your Makefile , check that wether they exist
+* before using any of these in your Makefile , check that wether they exist
 or not by using 'which' command . for example : which gotestsum 
