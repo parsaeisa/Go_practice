@@ -21,3 +21,17 @@ https://github.com/parsaeisa/golang_url_shortener
 ### To Learn : 
 * strings.Builder
 * goqu : a package which generates sql queries for all of drivers like mysql , mariadb , postgresql , sqlite and etc . 
+
+## Data structures
+
+Golang has arrays and slices . 
+
+array is a numbered sequence of elements of a specific length. In typical Go code, slices are much more common; arrays are useful in some special scenarios.
+```go
+var a [5]int
+```
+
+but slice has a dynamic size . 
+```go 
+s := make([]string, 3)
+```
