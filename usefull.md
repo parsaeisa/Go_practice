@@ -40,4 +40,4 @@ var cars []Car
 errFakeData := faker.FakeData(&cars, options.WithRandomMapAndSliceMaxSize(uint(5)))
 ```
 
-Also you can add a MinSize in options . 
+You can also add a MinSize in options . 
