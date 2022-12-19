@@ -25,6 +25,11 @@ Packages :
 * database sql: The "database/sql" which I think is a built-in golang package .
 * go sql mock : "github.com/DATA-DOG/go-sqlmock"
 
+We should put expectations on : 
+* Table rows
+* The query which is sent to the database 
+* The result 
+
 For test suite we define a struct : 
 ```go
 type FooTestSuite struct {
