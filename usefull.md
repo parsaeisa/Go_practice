@@ -33,3 +33,9 @@ func main() {
 }
 
 ```
+
+For randomizing an array of values , use the code below : 
+```go
+var passengerRating []model.PassengerRating
+errFakeData := faker.FakeData(&passengerRating, options.WithRandomMapAndSliceMaxSize(uint(5)))
+```
