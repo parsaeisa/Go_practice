@@ -33,3 +33,11 @@ func main() {
 }
 
 ```
+
+For randomizing an array of values , use the code below : 
+```go
+var cars []Car
+errFakeData := faker.FakeData(&cars, options.WithRandomMapAndSliceMaxSize(uint(5)))
+```
+
+You can also add a MinSize in options . 
