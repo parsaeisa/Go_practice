@@ -19,9 +19,23 @@ type CarsTestSuite struct {
 
 We add our dependencies in this struct .
 
-## 2. Setup test
+## 2. Setup suite
 
 This is the stage that we initiate our dependencies in :
+
+```go
+func (suite ServerTestSuite) SetupSuite() {
+	ctrl := gomock.NewController(suite.T())
+	defer ctrl.Finish()
+}
+```
+
+> Read about 'gomock' here . (add the link)
+
+## 3. Setup test
+
+I think this method is called before each unit-test . 
+
 ```go
 func (suite *CarsTestSuite) SetupTest() {
 	require := suite.Require()
@@ -37,7 +51,7 @@ func (suite *CarsTestSuite) SetupTest() {
 
 ```
 
-## 3. Testing
+## 4. Testing
 
 Now for each test , we assign a new method to our `suite` and call our method and its dependency there . 
 
@@ -61,7 +75,7 @@ We have two types of test cases :
 
 ### Failure
 
-## 4. Run tests
+## 5. Run tests
 In order to run all of tests , we should use these line : 
 ```go
 func TestCars(t *testing.T) {
