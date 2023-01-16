@@ -17,6 +17,14 @@ go install gotest.tools/gotestsum@latest
 ```bash
 curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(shell go env GOPATH)/bin;
 ```
+golang ci-lint takes a yml file as input. usage : 
+
+```bash
+golangci-lint run {path to yaml file} ./...
+```
+apparently `golint` is deprecated now and revive is used instead. 
+
+This is a yml file that can be passed to the golang-ci lint : https://github.com/n25a/Boiler/blob/master/golang/golangci-lint.yml
 
 `goimports`
 
