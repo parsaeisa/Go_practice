@@ -17,5 +17,6 @@ usages .
 | os           | creating files                                                               |
 | ioutil       | read from file and write to them , <br/> read directores and files' names    |
 | regexp       | find matchings of a regex in a text ,<br/> check a texts matching to a regex |
- | encoding/csv | reading and opening csv files                                                | 
+| encoding/csv | reading and opening csv files                                                | 
+|text/template | creating texts, accepting an object, the object's attributes are shown in text |
 
