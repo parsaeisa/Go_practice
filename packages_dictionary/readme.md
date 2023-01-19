@@ -7,6 +7,7 @@ usages .
 |----------|-----------------------------|------|
 | httptest | making mock http requests   | todo |
 | mockgen  | creating mock of interfaces | todo |
+| goqu     | generates queries           | https://github.com/doug-martin/goqu |
 
 
 ### Built-in packages
