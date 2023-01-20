@@ -23,8 +23,7 @@ https://github.com/parsaeisa/golang_url_shortener
 - [Reflection](https://github.com/parsaeisa/Go_practice#reflection)
 
 ### To Learn : 
-* strings.Builder
-* goqu : a package which generates sql queries for all of drivers like mysql , mariadb , postgresql , sqlite and etc . 
+nothing for now !!
 
 ## Data structures
 
