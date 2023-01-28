@@ -155,6 +155,8 @@ if err != nil {
 }
 ```
 
+These lines trace all of your commands on database and redis . 
+
 ## Http server echo
 To wrap echo http server with otel , we need to define a middleware :
 ```python
@@ -162,5 +164,3 @@ s.e.Use(otelecho.Middleware(app.Name, otelecho.WithPropagators(
 		propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))))
 ```
 `s.e` is a place where we define handlers , like `s.e.GET()` 
-
-These lines trace all of your commands on database and redis . 
