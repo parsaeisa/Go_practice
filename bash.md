@@ -35,3 +35,10 @@ go install golang.org/x/tools/cmd/goimports@latest
 
 * before using any of these in your Makefile , check that wether they exist
 or not by using 'which' command . for example : which gotestsum 
+
+Installing project's packages :
+```go
+go mod vendor -v
+```
+the goproxy must be on . 
+
