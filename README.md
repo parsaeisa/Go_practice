@@ -23,7 +23,8 @@ https://github.com/parsaeisa/golang_url_shortener
 - [Reflection](https://github.com/parsaeisa/Go_practice#reflection)
 
 ### To Learn : 
-nothing for now !!
+* Goproxy ( try to run one goproxy )
+* Go embed
 
 ## Data structures
 
