@@ -42,3 +42,10 @@ go mod vendor -v
 ```
 the goproxy must be on . 
 
+The bash command below matches the modules to the source code. 
+```
+go mod tidy
+```
+
+go mod tidy works by loading all of the packages in the main module and all of the packages they import, recursively. 
+
