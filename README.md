@@ -21,10 +21,12 @@ https://github.com/parsaeisa/golang_url_shortener
 ### Topics
 - [Data structures](https://github.com/parsaeisa/Go_practice#data-structures)
 - [Reflection](https://github.com/parsaeisa/Go_practice#reflection)
+- [Techniques](https://github.com/parsaeisa/Go_practice#Techniques)
 
 ### To Learn : 
 * Goproxy ( try to run one goproxy )
 * Go embed
+* Go scheduler
 
 ## Data structures
 
