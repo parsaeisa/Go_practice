@@ -27,6 +27,7 @@ https://github.com/parsaeisa/golang_url_shortener
 * Goproxy ( try to run one goproxy )
 * Go embed
 * Go scheduler
+* concurrency patterns 
 
 ## Data structures
 
