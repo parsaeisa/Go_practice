@@ -28,6 +28,8 @@ https://github.com/parsaeisa/golang_url_shortener
 * Go embed
 * Go scheduler
 * concurrency patterns 
+* what was that fast json unmarshalling golang package ? 
+* gosec
 
 ## Data structures
 
