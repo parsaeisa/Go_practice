@@ -143,6 +143,26 @@ if err, open = <-nameErr; open {
 }
 ```
 
+### Wait group
+
+You can use wait group as a seperate tool. You can use it when there is no goroutine.
+
+You can add it and defer it's done in several methods that you want to perform something after their completion.
+
+```go
+wg *sync.WaitGroup
+
+// Consider the method f is being called in many other goroutines
+func f(){
+    wg.Add(1)
+    defer wg.Done()
+}
+
+n.wg.Wait()
+// The operations that you want to perform
+```
+
+
 ## Techniques
 
 ### Parent type 
