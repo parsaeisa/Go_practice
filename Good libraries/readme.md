@@ -8,6 +8,13 @@ usages .
 | httptest | making mock http requests   | todo |
 | mockgen  | creating mock of interfaces | todo |
 | goqu     | generates queries           | https://github.com/doug-martin/goqu |
+| Hugo | | 
+| Viper | It is used for config giles |
+| cobra | command line | | 
+| Task | Automations | https://taskfile.dev/ |
+| Carbon | Managing datetimes | https://github.com/golang-module/carbon |
+| Go-micro | for building microservices  | https://github.com/go-micro/go-micro
+| Colly | web scraping | https://github.com/gocolly/colly | 
 
 
 ### Built-in packages
