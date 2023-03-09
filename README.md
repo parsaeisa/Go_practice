@@ -19,9 +19,10 @@ after this tour I learned fundamentals of programming with golang so that I coul
 https://github.com/parsaeisa/golang_url_shortener
 
 ### Topics
-- [Data structures](https://github.com/parsaeisa/Go_practice#data-structures)
-- [Reflection](https://github.com/parsaeisa/Go_practice#reflection)
+- [Data structures](https://github.com/parsaeisa/Go_practice/blob/main/Notes/DataStructure.md)
+- [Reflection](https://github.com/parsaeisa/Go_practice/blob/main/Notes/Reflection.md)
 - [Techniques](https://github.com/parsaeisa/Go_practice#Techniques)
+- [Concurrency](https://github.com/parsaeisa/Go_practice/blob/main/Notes/Concurrency.md)
 
 ### To Learn : 
 * Goproxy ( try to run one goproxy )
