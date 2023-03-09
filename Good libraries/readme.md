@@ -8,8 +8,8 @@ usages .
 | httptest | making mock http requests   | todo |
 | mockgen  | creating mock of interfaces | todo |
 | goqu     | generates queries           | https://github.com/doug-martin/goqu |
-| Hugo | | 
-| Viper | It is used for config giles |
+| Hugo | static web pages  | | 
+| Viper | It is used for config giles | |
 | cobra | command line | | 
 | Task | Automations | https://taskfile.dev/ |
 | Carbon | Managing datetimes | https://github.com/golang-module/carbon |
