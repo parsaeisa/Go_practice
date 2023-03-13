@@ -15,7 +15,10 @@ Also stringbuilder library is not thread safe.
 To edit a shared variable in multiple threads we must do one of the either way : 
 * Semaphore, lock
 * Atomic
-## Channels
+
+## Utilities
+
+### Channels
 
 When you are done with a channel you should close it using the `close` function.
 
@@ -28,7 +31,7 @@ if err, open = <-nameErr; open {
 }
 ```
 
-## Wait group
+### Wait group
 
 You can use wait group as a seperate tool. You can use it when there is no goroutine.
 
@@ -47,7 +50,18 @@ n.wg.Wait()
 // The operations that you want to perform
 ```
 
-## Callbacks
+### Locks
+> To complete !!
+
+## Design patterns
+
+### Goroutine pool
+The point Goroutine pool is the limit that it has on the number of goroutines. 
+
+As an instance if we have some channles that should be waited on, we buffer them somewhere, then a goroutine which has nothing to do, 
+goes to wait on it.
+
+### Callbacks
 
 Callbacks is another concurrency pattern.
 
