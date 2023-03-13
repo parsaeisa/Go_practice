@@ -47,3 +47,17 @@ n.wg.Wait()
 // The operations that you want to perform
 ```
 
+## Callbacks
+
+Callbacks is another concurrency pattern.
+
+Consider we have multiple goroutines which has some errors in themselves. 
+An approach is to send user their errors, but the main goroutine in users call should wait for other goroutines to be finished.
+
+We don't want this , we don't want users patience. User wants to see the result of it's request immediately. 
+
+Here we use **callbacks**. We take some callbacks from user which is a function.
+
+Then when we collected the errors of those goroutines ( in a goroutine rather than main goroutine), we just call the callbacks.
+
+User can specify the operations that are performed in the callback.
