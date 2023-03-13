@@ -1,13 +1,5 @@
 # Concurrency . 
 
-There is some neat tools in golang for parallel programming.
-
-* go func
-* wait group
-* select
-* channels
-
-
 > Map and array are not thread safe. We cannot edit a single array in multiple seperated threads.
 
 Also stringbuilder library is not thread safe.
@@ -17,6 +9,14 @@ To edit a shared variable in multiple threads we must do one of the either way :
 * Atomic
 
 ## Utilities
+
+There is some neat tools in golang for parallel programming.
+
+* go func
+* wait group
+* select
+* channels
+
 
 ### Channels
 
