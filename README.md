@@ -32,6 +32,7 @@ https://github.com/parsaeisa/golang_url_shortener
 * concurrency patterns 
 * what was that fast json unmarshalling golang package ? 
 * gosec
+* Search "advanced golang programming" in google.
 
 ## Techniques
 
