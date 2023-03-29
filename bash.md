@@ -4,6 +4,7 @@ Here you can see names and some tutorials of golang packages which run
 in terminals . 
 * These packages are so suitable for Makefiles in golang projects .
 
+### gotestsum
 `gotestsum` is like go test ./... but is utilized with a more preferable log . You can get this
 by using below command : 
 ```bash
@@ -12,6 +13,7 @@ go install gotest.tools/gotestsum@latest
 
 `goi18n`
 
+### golangci-lint
 `golangci-lint` is used as a lint . Can be received by the command below : 
 
 ```bash
@@ -26,6 +28,7 @@ apparently `golint` is deprecated now and revive is used instead.
 
 This is a yml file that can be passed to the golang-ci lint : https://github.com/n25a/Boiler/blob/master/golang/golangci-lint.yml
 
+### goimports
 `goimports`
 
 installing :
@@ -33,9 +36,10 @@ installing :
 go install golang.org/x/tools/cmd/goimports@latest
 ```
 
-* before using any of these in your Makefile , check that wether they exist
+> before using any of these in your Makefile , check that wether they exist
 or not by using 'which' command . for example : which gotestsum 
 
+## Package managing
 Installing project's packages :
 ```go
 go mod vendor -v
