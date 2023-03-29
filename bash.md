@@ -11,6 +11,10 @@ by using below command :
 go install gotest.tools/gotestsum@latest
 ```
 
+gotestsum features : 
+- computing the coverage 
+- running tests
+
 `goi18n`
 
 ### golangci-lint
