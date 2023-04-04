@@ -43,7 +43,7 @@ func WithMiddleware(middleware Middleware) Opt {
 
 In this way you are actually abstracting the parameters that you want to be optional as a single type, Then you can make all of them optional parameters. 
 
-While defining the signature of method (with more than one optional argument), you just add "...Opt", And when you call that method, you add the defined methods (like DelivarAll) in code. 
+While defining the signature of a method (with more than one optional argument), you just add "...Opt", And when you call that method, you add the defined methods (like DelivarAll) in code. 
 ```go
 // definig method 
 func method(int param1, int param2, ...opts){
@@ -54,7 +54,7 @@ func method(int param1, int param2, ...opts){
 method(param1, param2, DeliverALL(), DeliverNew())
 ```
 
-Also there is something that you have to in the method. You should create a new instance of `Opts` object, then apply each of Opt methods on them.
+Also there is something that you have to do in the method. You should create a new instance of `Opts` object, then apply each of Opt methods on them.
 
 At last you use that created Opts object's properties for your logic.
 ```go
