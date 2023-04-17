@@ -29,6 +29,10 @@ https://github.com/parsaeisa/golang_url_shortener
 
 Golang implementation on design patterns  : https://refactoring.guru/design-patterns/go
 
+## A brilliant way to learn new things 
+
+**Reading source codes of big projects** is a very simple thing that can always provide us with new things to learn.
+
 ## To Learn : 
 * Goproxy ( try to run one goproxy )
 * Go embed
