@@ -129,4 +129,27 @@ if err != nil {
     log.Fatal(err)
 }
 ```
+Then we need to publish the job payload on it : 
+```go
+jobPayload := []byte("Delayed job payload")
 
+// Set the time delay for the job
+delay := 10 * time.Second
+expiration := strconv.FormatInt(int64(delay/time.Millisecond), 10)
+
+// Publish the delayed job message
+err = ch.Publish(
+    delayedExchangeName, // Name of the delayed exchange
+    "originalRoutingKey", // Routing key for the delayed queue
+    false,             // Mandatory - return message if it cannot be routed to any queue
+    false,             // Immediate - return message if it cannot be consumed immediately
+    amqp.Publishing{
+        ContentType: "text/plain",
+        Body:        jobPayload,
+        Expiration:  expiration, // TTL for the message
+    },
+)
+if err != nil {
+    log.Fatal(err)
+}
+```
