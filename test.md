@@ -25,8 +25,7 @@ This is the stage that we initiate our dependencies in :
 
 ```go
 func (suite ServerTestSuite) SetupSuite() {
-	ctrl := gomock.NewController(suite.T())
-	defer ctrl.Finish()
+
 }
 ```
 
@@ -38,6 +37,9 @@ I think this method is called before each unit-test .
 
 ```go
 func (suite *CarsTestSuite) SetupTest() {
+	ctrl := gomock.NewController(suite.T())
+	defer ctrl.Finish()
+
 	require := suite.Require()
 	var err error
 
@@ -50,6 +52,8 @@ func (suite *CarsTestSuite) SetupTest() {
 }
 
 ```
+
+> Put the creation of ctrl and mocks in SetupTest.
 
 ## 4. Testing
 
@@ -70,6 +74,14 @@ func (suite *CarsTestSuite) TestCase1_Success() {
 We have two types of test cases : 
 * Success : We expect the result to be something specific . 
 * Failure : We expect the method returns an error .
+
+## 4. TearDown
+
+```go
+func (suite *DriverCancellationReasonTestSuite) TearDownSuite() { //monkey.UnpatchAll()
+	suite.ctrl.Finish()
+}
+```
 
 ### Succes
 
