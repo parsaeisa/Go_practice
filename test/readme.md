@@ -71,3 +71,35 @@ require.NoError(suite.mock.ExpectationsWereMet())
 ```
 
 ### Insert requests
+
+## Testing http handler
+
+You need a `ctx` for the handler that you want to test. This context must be fake, here's a way to create a fake context using `http.Recorder` : 
+
+```go
+func SubmitDriverCancellationReasonsV3NewEchoContext(
+	/* arguments in url */) (echo.Context, *httptest.ResponseRecorder) {
+	
+    // Creating request and it's params
+	url := /* Your url */
+	request := httptest.NewRequest(http.MethodPatch, url, nil)
+	request.Header.Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
+
+	response := httptest.NewRecorder()
+	e := echo.New()
+	ctx := e.NewContext(request, response)
+
+    // Setting params
+	ctx.SetParamNames(
+		"id",
+		"type",
+	)
+	ctx.SetParamValues(
+		id,
+		rejectReasonType,
+	)
+	ctx.Set(httpctx.UserIDContextField, userID)
+
+	return ctx, response
+}
+```
