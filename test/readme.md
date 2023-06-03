@@ -32,7 +32,7 @@ We add our dependencies in this struct .
 
 ### 2. Setup suite
 
-This is the stage that we initiate our dependencies in :
+This method runs just one time at the beginning.
 
 ```go
 func (suite ServerTestSuite) SetupSuite() {
@@ -44,14 +44,13 @@ func (suite ServerTestSuite) SetupSuite() {
 
 ### 3. Setup test
 
-I think this method is called before each unit-test . 
+This method is called many times, before each unit-test . 
 
 ```go
 func (suite *CarsTestSuite) SetupTest() {
 	ctrl := gomock.NewController(suite.T())
 	defer ctrl.Finish()
 
-	require := suite.Require()
 	var err error
 
 	suite.db, suite.mock, err = sqlmock.New()
@@ -81,6 +80,12 @@ func (suite *CarsTestSuite) TestCase1_Success() {
 	// define restrictions
 }
 ```
+
+This require has some usefull methods : 
+* NoError
+* Equal
+* EqualError
+* JSONEqual
 
 We have two types of test cases : 
 * Success : We expect the result to be something specific . 
