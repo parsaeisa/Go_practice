@@ -4,6 +4,14 @@ Here you can see names and some tutorials of golang packages which run
 in terminals . 
 * These packages are so suitable for Makefiles in golang projects .
 
+## Go commands
+
+Creating vendor folder based on go.mod:
+```bash
+go mod vendor -v
+```
+After this command, GoLand starts indexing.
+
 ### gotestsum
 `gotestsum` is like go test ./... but is utilized with a more preferable log . You can get this
 by using below command : 
