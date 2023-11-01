@@ -75,3 +75,7 @@ Here we use **callbacks**. We take some callbacks from user which is a function.
 Then when we collected the errors of those goroutines ( in a goroutine rather than main goroutine), we just call the callbacks.
 
 User can specify the operations that are performed in the callback.
+
+
+### Worker-pool 
+
