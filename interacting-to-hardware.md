@@ -23,3 +23,28 @@ Golang's compiler has a feature called **Padding** or **Allignment**.
 ## Overhead
 
 Each program in a computer is bunch of assembly instructions. 
+
+Getting the size of an object:
+```go
+package main
+
+import (
+	"fmt"
+	"unsafe"
+)
+
+// Put your structs here:
+type Foo struct {
+	A float64
+	B *int
+	C *int
+	D int
+	E bool
+}
+
+func main() {
+	f := Foo{}
+	fmt.Println(unsafe.Sizeof(f))
+}
+
+```
