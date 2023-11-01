@@ -35,6 +35,8 @@ Golang implementation on design patterns  : https://refactoring.guru/design-patt
 
 **Reading source codes of big projects** is a very simple thing that can always provide us with new things to learn.
 
+> Try to read **one** golang project from github each **week**.
+
 ## To Learn : 
 * Goproxy ( try to run one goproxy )
 * Go embed
