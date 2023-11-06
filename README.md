@@ -38,6 +38,10 @@ Golang implementation on design patterns  : https://refactoring.guru/design-patt
 
 > Try to read **one** golang project from github each **week**.
 
+Github repo queue:
+- https://github.com/yasharne/go.d.plugin
+- https://github.com/mhrlife/bigcache
+
 ## To Learn : 
 * Goproxy ( try to run one goproxy )
 * Go embed
