@@ -52,3 +52,7 @@ httpShutdownRequest <- struct{}{}
 
 Many packages have built-in methods for graceful shutdown and you don't have to implement it manually. 
 
+For brokers such as Nats, rabbit mq, etc. there methods that are like `Unsubscribe`, `UnsubscribeAll`, etc. which do the graceful shutdown. 
+
+All `Close` for connections are being used for graceful shutdown. Most of the times, Close method is being called after `defer` for cleaning.
+
