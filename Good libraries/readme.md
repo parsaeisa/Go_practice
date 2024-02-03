@@ -19,6 +19,7 @@ usages .
 | Viper | Parsing config files | github.com/spf13/viper |
 | i18n | Internationalization, But I only know this | |
 | go breaker | implentation of circuit breaker pattern in go | https://github.com/sony/gobreaker |
+| Throttled | Rate limiting | https://github.com/throttled/throttled |
 
 
 ### Built-in packages
