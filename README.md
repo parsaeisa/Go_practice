@@ -51,3 +51,25 @@ Github repo queue:
 * what was that fast json unmarshalling golang package ? 
 * gosec
 * Search "advanced golang programming" in google.
+
+## Concepts
+
+### Memory leakage
+
+Memoray leakage happens when the program allocates a memory and cannot ( or forgets ) to de-allocate it. 
+
+Here, for programming languages, there is a feature called garbage collector which de-allocates useless allocated parts of memory. 
+
+For memory there are some names that delve in:
+- Stack:stack memory is used for storing local variables and function call information. Each Goroutine in Golang has its own stack, typically with a fixed size (e.g., 2MB). Stack memory is managed efficiently by Golang runtime and is automatically reclaimed when a Goroutine exits.
+
+- Heap: managing heap has more overhead for the code. Heap is used for dynamically allocated data, such as objects created with 'new' or 'make' operators.
+
+There are some metrics which shows the situation of memory leakage: 
+- rates of allocation  
+- number of live objects
+- memory in stack
+- memory in heap
+- GC duration quantile
+
+Monitoring these metrics in a long time can give a good sight about memory leakage. Memory leakage in a long-time can be very harmful. 
