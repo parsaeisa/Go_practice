@@ -20,6 +20,7 @@ usages .
 | i18n | Internationalization, But I only know this | |
 | go breaker | implentation of circuit breaker pattern in go | https://github.com/sony/gobreaker |
 | Throttled | Rate limiting | https://github.com/throttled/throttled |
+| go-cron | Job scheduling package | https://github.com/go-co-op/gocron |
 
 
 ### Built-in packages
