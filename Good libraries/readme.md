@@ -32,5 +32,4 @@ usages .
 | regexp       | find matchings of a regex in a text ,<br/> check a texts matching to a regex |
 | encoding/csv | reading and opening csv files                                                | 
 |text/template | creating texts, accepting an object, the object's attributes are shown in text |
-
 | crypto/x509 | Package x509 implements a subset of the X.509 standard. [link](https://pkg.go.dev/crypto/x509) |
