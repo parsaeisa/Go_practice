@@ -16,3 +16,25 @@ This is an example:
 ```
 
 As you can see, you can not add a handler.
+
+## CORS middleware
+
+```go
+s.e.Use(echoMiddleware.CORSWithConfig(echoMiddleware.CORSConfig{
+    AllowOrigins:     config.C.HTTP.CORS.AllowedOrigins,
+    AllowMethods:     config.C.HTTP.CORS.AllowedMethods,
+    AllowHeaders:     config.C.HTTP.CORS.AllowedHeaders,
+    AllowCredentials: config.C.HTTP.CORS.AllowCredentials,
+    ExposeHeaders:    config.C.HTTP.CORS.ExposedHeaders,
+    MaxAge:           config.C.HTTP.CORS.MaxAge,
+}))
+```
+
+## Recover with config middleware
+```go
+s.e.Use(echoMiddleware.RecoverWithConfig(echoMiddleware.RecoverConfig{
+    StackSize:         config.C.HTTP.Recover.StackSize << 10,
+    DisableStackAll:   config.C.HTTP.Recover.DisableStackAll,
+    DisablePrintStack: config.C.HTTP.Recover.DisablePrintStack,
+}))
+```
