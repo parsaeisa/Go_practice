@@ -2,6 +2,8 @@
 
 Echo has custom validator. 
 
+You can write a middleware to set some parameters in heading which is useful in handler. But you must be careful while seperating the handler logic and the middleware logic.
+
 ## Proxy middleware
 
 When defining a route in echo, you can add a middleware that redirects it's requests between multiple targets. While sending requests to multiple targets, it can **balance the load** with different **load balancing algorithms** such as round robin. 
