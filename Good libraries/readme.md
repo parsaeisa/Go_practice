@@ -21,7 +21,7 @@ usages .
 | go breaker | implentation of circuit breaker pattern in go | https://github.com/sony/gobreaker |
 | Throttled | Rate limiting | https://github.com/throttled/throttled |
 | go-cron | Job scheduling package | https://github.com/go-co-op/gocron |
-
+| pyroscope | Profiling | https://github.com/grafana/pyroscope |
 
 ### Built-in packages
 | Package      | usage                                                                        |
