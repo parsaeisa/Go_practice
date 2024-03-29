@@ -45,3 +45,7 @@ or
 i,ok := likes["parsa's post 1"]
 ```
 If the key exists in map, the `ok` variable is true, otherwise it is false.
+
+### Concurrency
+
+Map data structure has some challenges in parallel use. [To complete]
