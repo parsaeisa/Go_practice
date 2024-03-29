@@ -11,3 +11,21 @@ In such cases by the code below, we can access those methods:
 ```go
 err.(validator.ValidationErrors)
 ```
+
+## Set
+
+When you need a set (where each elements differ), you can easily use map. 
+
+```go
+yourMap = make(map[int]struct{})
+yourMap[firstElem] = struct{}{}
+yourMap[secondElem] = struct{}{}
+```
+
+Then for checking an elements existance, you can use this:
+
+```go
+val, ok := yourMap[searchedElem]
+```
+
+The `ok` shows that whether your element exist or not. 
