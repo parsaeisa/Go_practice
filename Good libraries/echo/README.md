@@ -38,3 +38,12 @@ s.e.Use(echoMiddleware.RecoverWithConfig(echoMiddleware.RecoverConfig{
     DisablePrintStack: config.C.HTTP.Recover.DisablePrintStack,
 }))
 ```
+
+## Other middlewares
+
+```go
+s.e.Pre(echoMiddleware.RemoveTrailingSlash())
+s.e.Use(echoMiddleware.BodyLimit(config.C.HTTP.BodyLimitSize))
+```
+
+* What is .Pre ??
