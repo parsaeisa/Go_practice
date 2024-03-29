@@ -62,3 +62,15 @@ fieldTags := tag.Get("yaml")
 ```
 
 The field is the output of the method `Field` that was mentioned before.
+
+## Putting timeout 
+
+A technique for putting timeout on a goroutine is this: 
+```go
+select {
+case <-time.After(timeout):
+    log.App.Fatal("Failed: Timeout")
+}
+```
+
+The `timeout`, must be of time `time.Duration`.
