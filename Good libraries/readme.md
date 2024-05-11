@@ -34,3 +34,4 @@ usages .
 |text/template | creating texts, accepting an object, the object's attributes are shown in text |
 | crypto/x509 | Package x509 implements a subset of the X.509 standard. [link](https://pkg.go.dev/crypto/x509) |
 | hash | Don't know what, example: using crc32 to compute `ChecksumIEEE` |
+| runtime | I think this package helps to manage goroutines more efficiently and in a lower level. It has some methods to get information about goroutines and other functionalities such as terminating them, etc. [documentation](https://pkg.go.dev/runtime#GOMAXPROCS) |
