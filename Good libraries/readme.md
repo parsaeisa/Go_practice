@@ -22,6 +22,7 @@ usages .
 | Throttled | Rate limiting | https://github.com/throttled/throttled |
 | go-cron | Job scheduling package | https://github.com/go-co-op/gocron |
 | pyroscope | Profiling | https://github.com/grafana/pyroscope |
+| go-cpu-load | Generating load on CPU on any os | https://github.com/vikyd/go-cpu-load |
 
 ### Built-in packages
 | Package      | usage                                                                        |
